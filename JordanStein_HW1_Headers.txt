@@ -1,0 +1,204 @@
+Jordan Stein
+CSCI 3800 - 001 Web API
+Assignment One
+
+I included all headers given from Postman, SOAP-UI, and from loading both the JSON and wsdl files into the Chrome web-browser.
+
+REST Headers 
+REST Response:
+Header: alt-svc
+Value: quic=”:443”; ma = 604800; v=”30,29,28,27,26,25”
+Meaning: Alternative services used.
+
+Header: alternate-protocol
+Value: 443:quic,p=1
+Meaning: alternative protocol. quic stands for Quick UDP Internet Connections. Google uses this to run a stream of multiplexing protocol for transport layer security.
+
+Header: content-encoding
+Value: gzip
+Meaning: The type of encoding used on the data. gzip is a GNU zip format.
+
+Header: content-length
+Value: 6396
+Meaning: Content-Length indicates the size of the entity body in the decimal number of octets sent to the recipient.
+
+Header: content-type
+Value: application/json; charset=UTF-8
+Meaning: The media type of the content. This value states that the file format is application/json and the charset is utf-8.
+
+Header: cache-control
+Value: private, max-age=0; must-revalidate, no-transform
+Meaning: cache-control determines whether data may be cached from the server to the client.
+
+Header: date
+Value: Wed, 10 Feb 2016 04,47,40 GMT
+Meaning: date and time when the message was sent.
+
+Header: etag
+Value: “3z2GbiG39NRdo416x8jooTTBAqY/AUOjzkyf59h28bC_ciSnR9mmm8”
+Meaning: identifies which version of the resource was available.
+
+Header: expires
+Value: Wed,10 Feb 2016 04:47:40 GMT
+Meaning: date/time of when the response was considered stale.
+
+Header: server
+Value: GSE
+Meaning: The name of the server. 
+
+Header: status
+Value: 304
+Meaning: Status code received from the server response. Status codes give different information about the response. The value 304 stands for “not modified”. This means that the response had not changed since the request so there is no need to retransmit the resource.
+
+Header: vary
+Value: Origin, X-Origin
+Meaning: Vary tells the downstream proxies whether the cached response can be used or if a new fresh response should be transmitted to the client. Origin means that a new response was sent.
+
+Header: x-content-type-options
+Value: nosniff
+Meaning: “nosniff” prevents the browser from MIME-sniffing a response away from the declared content-type
+
+Header: x-frame-options
+Value: SAMEORIGIN
+Meaning: protection from “click-jacking”, set to deny which implies that there is no rendering if there is an origin mismatch
+
+Header: x-xss-protection
+Value: 1; mode=block
+Meaning: Cross-site scripting filter (XSS)
+
+
+REST Request:
+Header: :authority:
+Value: www.googleapis.com
+Meaning: Determines which website has full authority.
+
+Header: :method:
+Value: GET
+Meaning: The GET method retrieves information from the given server using a URI. Any request that uses GET should only retrieve data and should not alter any data.
+
+Header: :path:
+Value: /books/v1/volumes?q=turing
+Meaning: indicates the path of the file being transmitted.
+
+Header: :scheme:
+Value: https
+Meaning: indicates the scheme that the file is presented.
+
+Header: accept
+Value: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Meaning: media types that are acceptable.
+
+Header: accept-encoding
+Value: gzip, deflate, sdch
+Meaning: list of acceptable encoding types for the data.
+
+Header: accept-language
+Value: en-US,en;q=0.8
+Meaning: restricts the set of natural languages that are preferred as a response to the request.
+
+Header: if-none-match
+Value: “3z2GbiG39NRdo416x8jooTTBAqY/AUOjzkyf59h28bC_ciSnR9mmm8”
+Meaning: sets a no-cache value.
+
+Header: upgrade-insecure-requests
+Value: 1
+Meaning: indicates that the browser prefers the security type on the page.
+
+Header: user-agent 
+Value: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.103 Safari/537.36
+Meaning: Indicates the software used to request the server.
+
+Header: x-client-data
+Value: CKO2yQEIxLbJAQj6icoBCICKygEI/ZXKAQ==
+Meaning: Chrome variation header that takes information from the client.
+
+
+
+
+
+SOAP Headers
+SOAP Request:
+
+Header: Accept
+Value: text/html, application/xhtml+xml, application/xml ;q=0.9, image/webp, */*,q=0.8
+Meaning: media types that are acceptable.
+
+Header: Accept-Encoding
+Value: gzip, deflate, sdch
+Meaning: list of acceptable encoding types for the data.
+
+Header: Accept-Language
+Value: en-US, en; q=0.8
+Meaning: restricts the set of natural languages that are preferred as a response to the request.
+
+Header: Cache-Control
+Value:  max-age=0
+Meaning: cache-control determines whether data may be cached from the server to the client.
+
+Header: Connection
+Value: keep-alive
+Meaning: Connection header allows the field to specify which options are desired for the particular connection.
+
+Header: Host
+Value: www.webservicex.net
+Meaning: Name of the website that is hosting the server.
+
+Header: Upgrade-Insecure-Requests
+Value: 1
+Meaning: indicates that the browser prefers the security type on the page.
+
+Header: User-Agent 
+Value: Mozilla/5.0 (X11; CrOS x86_64 7647.73.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.92 Safari/537.36
+Meaning: Indicates the software used to request the server.
+
+
+
+SOAP Response:
+
+Header: Cache-Control
+Value: private, max-age=0
+Meaning: cache-control determines whether data may be cached from the server to the client.
+
+Header: Connection
+Value: keep-alive
+Meaning: Connection header allows the field to specify which options are desired for the particular connection.
+
+Header: Content-Length
+Value: 9603
+Meaning: Content-Length indicates the size of the entity body in the decimal number of octets sent to the recipient.
+
+Header: Via
+Value: 1.1 wsa2-man.ucdenver.pvt:80 (Cisco-WSA/8.8.0-085)
+Meaning: Connection used to request the page from the server.
+
+Header: X-AspNet-Version 
+Value: 4.0.30319 
+Meaning: Version of the ASP.NET used.
+
+Header: Vary
+Value: Accept-Encoding
+Meaning: Vary: Accept-Encoding tells the browser that there are two cacheable responses of the same resource even if the request header varies.
+
+Header: Date
+Value: Tue, 09 Feb 2016 19:30:46 GMT
+Meaning: Timestamp of the HTTP request.
+
+Header: #status#
+Value: HTTP/1.1 200 OK
+Meaning: Status code received from the server response. Status codes give different information about the response. The value 200 OK means that the request has successfully completed without errors.
+
+Header: Content-Encoding
+Value: gzip
+Meaning: The type of encoding used on the data. gzip is a GNU zip format.
+
+Header: Content-Type
+Value: text/xml; charset=utf-8
+Meaning: The media type of the content. This value states that the file format is text/xml and the charset is utf-8.
+
+Header: Server
+Value: Microsoft -IIS/7.0
+Meaning: The name of the server responding to the request.
+
+Header: X-Powered-By
+Value: ASP.net
+Meaning: Name of company that powers the server.

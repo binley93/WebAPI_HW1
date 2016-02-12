@@ -1,0 +1,29 @@
+{
+	"id": "ef2c9d59-39a1-5478-c29d-1be5d587634a",
+	"name": "homework1",
+	"requests": [
+		{
+			"id": "b486967b-9c84-87b5-de6c-c5546dad5bd2",
+			"headers": "",
+			"url": "https://www.googleapis.com/books/v1/volumes?q=turing",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "var jsonData = JSON.parse(responseBody);\nvar title = jsonData.items[0].volumeInfo.title;\nfor(i=0; i < jsonData.items.length; i++){\n    if (jsonData.items[i].volumeInfo.title.has(\"Turing\")){\n        console.log(\"Title: \"+ jsonData.items[i].volumeInfo.title)\n        console.log(\"Author: \"+jsonData.items[i].volumeInfo.authors[0])\n        console.log(\"Published: \"+jsonData.items[i].volumeInfo.publishedDate)\n    }\n}\nvar patt = /turing/i;\nvar res = patt.test(title);\ntests[\"Book Title has turing\"] = responseBody.has(\"turing\");\ntests[\"Total Items\"] = jsonData.totalItems > 1\ntests[\"Status code = 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1455255694229,
+			"name": "JordanStein_HW1_JSON",
+			"description": "",
+			"collectionId": "ef2c9d59-39a1-5478-c29d-1be5d587634a",
+			"responses": []
+		}
+	],
+	"order": [
+		"b486967b-9c84-87b5-de6c-c5546dad5bd2"
+	],
+	"timestamp": 1455079410636
+}
